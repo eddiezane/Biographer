@@ -1,4 +1,6 @@
 Biographer::Application.routes.draw do
+  get "api/bio"
+
   root to: 'pages#index'
   get 'pages/index'
 
@@ -11,6 +13,8 @@ Biographer::Application.routes.draw do
     post 'create' => 'bio#create'
     post 'update' => 'bio#update'
   end
+
+  get 'api/bio/:email_md5' => 'api#bio'
 
   devise_for :users
 end
