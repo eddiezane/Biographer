@@ -7,6 +7,7 @@ class Bio::BioController < ApplicationController
   end
 
   def new
+    redirect_to bio_edit_path, notice: 'You bio already exists.' if !current_user.bio.nil?
     @bio = Bio.new
     @bio.user_id = current_user.id
   end

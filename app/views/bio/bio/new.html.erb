@@ -1,3 +1,25 @@
 <h1>Bio#New</h1>
-
-<%= render "form" %>
+<%= form_for :bio, :url => { :action => "create" } do |f| %>
+  <%= f.label 'first_name' %>
+  <%= f.text_field 'first_name' %>
+  <br>
+  <%= f.label 'last_name' %>
+  <%= f.text_field 'last_name' %>
+  <br>
+  <%= f.label 'phone_number' %>
+  <%= f.text_field 'phone_number' %>
+  <br>
+  <%= f.label 'school' %>
+  <%= f.text_field 'school' %>
+  <br>
+  <%= f.label 'occupation' %>
+  <%= f.text_field 'occupation' %>
+  <br>
+  <%= f.label 'resume_url' %>
+  <%= f.text_field 'resume_url' %>
+  <br>
+  <%= f.label 'about_me' %>
+  <%= f.text_area 'about_me' %>
+  <br>
+  <%= f.submit %>
+<% end %>
