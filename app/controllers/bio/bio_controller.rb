@@ -1,5 +1,6 @@
 class Bio::BioController < ApplicationController
   before_filter :authenticate_user!
+
   def view
     @bio = current_user.bio
     redirect_to bio_new_path if @bio.nil?
@@ -24,7 +25,11 @@ class Bio::BioController < ApplicationController
   end
 
   def edit
-    @bio = Bio.find(current_user.bio.id)
+    begin
+      @bio = Bio.find(current_user.bio.id)
+    rescue
+      redirect_to bio_new_path, notice: 'You need to make a bio before you can edit it.'
+    end
   end
 
   def update
@@ -37,4 +42,5 @@ class Bio::BioController < ApplicationController
       end
     end
   end
+
 end

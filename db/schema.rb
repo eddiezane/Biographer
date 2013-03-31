@@ -11,14 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331064224) do
+ActiveRecord::Schema.define(:version => 20130331082622) do
 
   create_table "bios", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.text     "about_me"
+    t.string   "phone_number"
+    t.string   "school"
+    t.string   "occupation"
+    t.string   "resume_url"
+    t.string   "email_md5"
   end
 
   create_table "users", :force => true do |t|
