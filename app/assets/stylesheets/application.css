@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation_and_overrides
  *= require_tree .
  */
 #flash_notice, #flash_error, #flash_alert {
@@ -66,4 +67,3 @@ form .field, form .actions {
 #user_nav {
   float: right;
 }
- *= require foundation_and_overrides
