@@ -27,7 +27,7 @@
         <nav class="top-bar" id="navy">
           <ul class="title-area">
             <li class="name">
-              <p>Biographer<p>
+              <%=link_to "<p>Biographer<p>".html_safe, root_path %>
                 </li>
               </ul>
               <section class="top-bar-section">
@@ -51,15 +51,15 @@
           </div>
         </header>
         <div class="row">
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, id: "flash_#{name}" %>
-        <% end %>
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, id: "flash_#{name}" %>
+          <% end %>
 
-        <%= yield %>
-        <div class="large-12 columns">
+          <%= yield %>
+          <div class="large-12 columns">
 
-        <%= javascript_include_tag "application" %>
-      </div>
-      </div>
+            <%= javascript_include_tag "application" %>
+          </div>
+        </div>
       </body>
     </html>
