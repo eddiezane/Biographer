@@ -2,6 +2,7 @@ class Bio::BioController < ApplicationController
   before_filter :authenticate_user!
   def view
     @bio = current_user.bio
+    redirect_to bio_new_path if @bio.nil?
   end
 
   def new

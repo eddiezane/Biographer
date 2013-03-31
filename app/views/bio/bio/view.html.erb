@@ -1,2 +1,4 @@
 <h1>Hello From Bio#View</h1>
-<h2><%= "#{@bio.first_name} #{@bio.last_name}" %></h2>
+<% !@bio.nil? do %>
+  <h2><%= "#{@bio.first_name} #{@bio.last_name}" %></h2>
+<% end %>
