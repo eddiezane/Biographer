@@ -1,0 +1,2 @@
+module Bio::BioHelper
+end
