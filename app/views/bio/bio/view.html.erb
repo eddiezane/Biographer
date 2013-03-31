@@ -1,6 +1,5 @@
-<h1>Hello From Bio#View</h1>
 <% if !@bio.nil? %>
-  <h2><%= "#{@bio.first_name} #{@bio.last_name}" %></h2>
+  <h1><%= "#{@bio.first_name} #{@bio.last_name}" %></h1>
   <h3><%= @bio.about_me %></h3>
   <h4>Phone Number: <%= @bio.phone_number %></h4>
   <h4>School: <%= @bio.school %></h4>
